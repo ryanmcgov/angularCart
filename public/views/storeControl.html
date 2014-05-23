@@ -1,0 +1,45 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/store">Store</a></li>
+    <li class="active"><a ng-href="#/admin">Administrator</a></li>
+   
+  </ul>
+  <h3 class="text-muted">Capitaaahhh</h3>
+</div>
+
+
+
+
+<div ng-controller="ProductCtrl" class="row">
+	<div class="col-lg-6">
+		<ul class="productList">
+        <li ng-repeat="product in products">
+            <ul class="products">
+              <li class="row">
+                <div class="col-md-6">
+                  <img src="{{product.image}}">
+                </div>
+                <div class="col-md-6">
+                  <span>Model: {{product.model}} </span><br>
+                  <span>Price: {{product.price | currency}} </span><br>
+                  <a class="btn btn-sm btn-success" ng-click="update(product)">Remove Product</a>
+
+                </div>
+              </li>
+              
+            </ul>
+        </li>
+      </ul>
+	</div>
+
+	<div class="col-lg-6">
+		<input type="text" ng-model="products.model" placeholder="Board Model"><br>
+    <input type="text" ng-model="products.price" placeholder="Board Price"><br>
+    <input type="text" ng-model="products.image" placeholder="Image Url"><br>
+    <textarea name="content" id="" cols="30" rows="10" ng-model="products.description" placeholder="Board Description"></textarea>
+    <button ng-click="addProduct(products)">Add Product</button>
+		
+	</div>
+</div>

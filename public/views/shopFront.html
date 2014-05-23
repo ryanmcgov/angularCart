@@ -1,0 +1,68 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/blog">Blog</a></li>
+    <li class="active"><a ng-href="#/store">Store</a></li>
+    <li><a ng-href="#/admin">Administrator</a></li>
+   
+  </ul>
+  <h3 class="text-muted">Capitaaahhh</h3>
+</div>
+
+
+
+<div class="jumbotron col-lg-6">
+    <div ng-model="buyTheseThings">
+      <ul class="productList">
+        <li ng-repeat="item in buyTheseThings">
+            <ul class="products">
+              <li class="row">
+                <div class="col-md-6">
+                  <img src="{{item.image}}">
+                </div>
+                <div class="col-md-6">
+                  <span>Model: {{item.name}} </span><br>
+                  <span>Price: {{item.price | currency}} </span><br>
+                  <a class="btn btn-sm btn-success" ng-click="addToCart(item)">Add Item</a>
+
+                </div>
+              </li>
+              
+            </ul>
+        </li>
+      </ul>
+      
+
+    </div>
+  
+</div>
+
+<div class="col-lg-6">
+  <div class="cart">
+     <h1>Shopping Cart</h1>
+
+     <div ng-model="itemCheckout">
+      <ul class="productList">
+        <li ng-repeat="item in itemCheckout">
+            <ul class="products">
+              <li class="row">
+                <div class="col-md-6">
+                  <img src="{{item.image}}">
+                </div>
+                <div class="col-md-6">
+                  <span>Model: {{item.name}} </span><br>
+                  <span>Price: {{item.price | currency}} </span><br>
+                  <a class="btn btn-sm btn-warning" ng-click="removeFromCart(item)">Remove Item</a>
+
+                </div>
+              </li>
+              
+            </ul>
+        </li>
+      </ul>
+      
+
+    </div>
+  </div>
+    
+</div>

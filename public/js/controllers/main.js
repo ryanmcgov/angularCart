@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngDay2App')
+angular.module('shoppingBlog')
   .controller('PostsCtrl', function ($scope, $location, PostsSvc) {
 
     $scope.createPost = function() {
@@ -24,4 +24,61 @@ angular.module('ngDay2App')
   		$location.path('/blog');
   	};
 
-  });
+  })
+  .controller('CheckoutCtrl', function ($scope) {
+    $scope.itemCheckout = [];
+
+    $scope.addToCart = function(item) {
+        $scope.itemCheckout.push(item);
+         
+    };
+
+    $scope.removeFromCart = function(item) {
+        var toRemove = $scope.itemCheckout.indexOf(item);
+        console.log(toRemove);
+
+        $scope.itemCheckout.splice(toRemove, 1);
+         
+    };
+
+ })
+  .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', function($scope, $location, ProductsSvc) {
+    $scope.products = ProductService.getAllProducts();
+
+    $scope.addProduct = function (product) {
+      ProductService.createNewProduct(product);
+      $location.path('/owner');
+
+    };
+
+  }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

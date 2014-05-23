@@ -1,11 +1,12 @@
 'use strict';
 
 angular
-  .module('ngDay2App', [
+  .module('shoppingBlog', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -28,7 +29,38 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
+      .when('/shop', {
+        templateUrl: 'views/shopFront.html',
+        controller: 'CheckoutCtrl'
+      })
+      .when('/owner', {
+        templateUrl: 'views/storeControl.html',
+        controller: 'PostCtrl'
+      })
+      .when('/shop/:id/edit', {
+        templateUrl: 'views/shopEdit.html',
+        controller: 'ProductCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
