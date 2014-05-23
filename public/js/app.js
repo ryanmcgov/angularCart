@@ -28,15 +28,15 @@ angular
         templateUrl: 'views/blog-editDetail.html',
         controller: 'PostCtrl'
       })
-      .when('/shop', {
+      .when('/store', {
         templateUrl: 'views/shopFront.html',
         controller: 'CheckoutCtrl'
       })
-      .when('/owner', {
+      .when('/admin', {
         templateUrl: 'views/storeControl.html',
         controller: 'PostCtrl'
       })
-      .when('/shop/:id/edit', {
+      .when('/admin/:id/edit', {
         templateUrl: 'views/shopEdit.html',
         controller: 'ProductCtrl'
       })
