@@ -35,7 +35,7 @@ angular
       })
       .when('/admin', {
         templateUrl: 'views/storeControl.html',
-        controller: 'PostCtrl'
+        controller: 'ProductCtrl'
       })
       .when('/admin/:id/edit', {
         templateUrl: 'views/shopEdit.html',

@@ -47,7 +47,7 @@ angular.module('shoppingBlog')
 
     $scope.addProduct = function (product) {
       ProductService.createNewProduct(product);
-      $location.path('/owner');
+      $location.path('/admin');
 
     };
 

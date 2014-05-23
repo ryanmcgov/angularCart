@@ -10,7 +10,7 @@
 </div>
 
 
-
+<div ng-controller="CheckoutCtrl">
 <div class="jumbotron col-lg-6">
     <div ng-model="buyTheseThings">
       <ul class="productList">
@@ -38,31 +38,34 @@
 </div>
 
 <div class="col-lg-6">
-  <div class="cart">
-     <h1>Shopping Cart</h1>
-
-     <div ng-model="itemCheckout">
-      <ul class="productList">
-        <li ng-repeat="item in itemCheckout">
-            <ul class="products">
-              <li class="row">
-                <div class="col-md-6">
-                  <img src="{{item.image}}">
-                </div>
-                <div class="col-md-6">
-                  <span>Model: {{item.name}} </span><br>
-                  <span>Price: {{item.price | currency}} </span><br>
-                  <a class="btn btn-sm btn-warning" ng-click="removeFromCart(item)">Remove Item</a>
-
-                </div>
-              </li>
-              
-            </ul>
-        </li>
-      </ul>
-      
-
-    </div>
-  </div>
+    <table class="table">
+        <tr>
+            
+            <th></th>
+            <th>Model</th>
+            <th>Qty</th>
+            <th>Cost</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="item in itemCheckout">
+            <td></td>
+            <td>{{item.name}}</td>           
+            <td><input type="number" ng-model="item.qty" ng-required class="input-mini"></td>
+            <td>{{item.price | currency}}</td>
+            <td>{{item.qty * item.price | currency}}</td>
+            <td>
+                [<a href ng-click="removeFromCart(item)" class="btn btn-small">Remove</a>]
+            </td>
+        </tr>
+        <tr>
+            <td><a href ng-click="addItem()" class="btn btn-small">Checkout</a></td>
+            <td></td>
+            <td>Total:</td>
+            <td>{{total() | currency}}</td>
+        </tr>
+    </table>
+  
     
+</div>
 </div>
