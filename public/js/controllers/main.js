@@ -49,9 +49,9 @@ angular.module('shoppingBlog')
       ProductsSvc.createNewProduct(product);
       $location.path('/admin');
 
-    };*/
+    };
 
-  }]);
+  }]);*/
 
 
 
