@@ -15,7 +15,7 @@
 <div ng-controller="ProductCtrl">
 	<div class="col-lg-6">
 		<ul class="productList">
-        <li ng-repeat="product in newproducts">
+        <li ng-repeat="product in products">
             <ul class="products">
               <li class="row">
                 <div class="col-md-6">
@@ -35,13 +35,13 @@
 	</div>
 
 	<div class="col-lg-6">
-		<input type="text" data-ng-model="newproducts.model" placeholder="Board Model"><br>
-    <input type="text" data-ng-model="newproducts.price" placeholder="Board Price"><br>
-    <input type="text" data-ng-model="newproducts.image" placeholder="Image Url"><br>
-    <input type="text" data-ng-model="newproducts.image2" placeholder="Second Image Url"><br>
-    <input type="text" data-ng-model="newproducts.thumbnail" placeholder="Thumbnail Url"><br>
-    <textarea name="content" id="" cols="30" rows="10" data-ng-model="newproducts.description" placeholder="Board Description"></textarea>
-    <button data-ng-click="addProduct(newproducts)">Add Product</button>
+		<input type="text" data-ng-model="newproduct.model" placeholder="Board Model"><br>
+    <input type="text" data-ng-model="newproduct.price" placeholder="Board Price"><br>
+    <input type="text" data-ng-model="newproduct.image" placeholder="Image Url"><br>
+    <input type="text" data-ng-model="newproduct.image2" placeholder="Second Image Url"><br>
+    <input type="text" data-ng-model="newproduct.thumbnail" placeholder="Thumbnail Url"><br>
+    <textarea name="content" id="" cols="30" rows="10" data-ng-model="newproduct.description" placeholder="Board Description"></textarea>
+    <button data-ng-click="addProduct(newproduct)">Add Product</button>
 		
 	</div>
 </div>

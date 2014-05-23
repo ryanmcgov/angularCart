@@ -48,7 +48,7 @@ angular.module('shoppingBlog')
       $location.path('/admin');
     };
 
-    //$scope.products = ProductsSvc.query();
+    $scope.products = ProductsSvc.query();
 
   }]);
 
