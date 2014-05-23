@@ -42,14 +42,14 @@ angular.module('shoppingBlog')
     };
 
  })
-  .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', function($scope, $location, ProductsSvc) {
+  /*.controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', function($scope, $location, ProductsSvc) {
     $scope.products = ProductsSvc.getAllProducts();
 
     $scope.addProduct = function (product) {
       ProductsSvc.createNewProduct(product);
       $location.path('/admin');
 
-    };
+    };*/
 
   }]);
 
