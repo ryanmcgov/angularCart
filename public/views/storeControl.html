@@ -35,11 +35,13 @@
 	</div>
 
 	<div class="col-lg-6">
-		<input type="text" ng-model="products.model" placeholder="Board Model"><br>
-    <input type="text" ng-model="products.price" placeholder="Board Price"><br>
-    <input type="text" ng-model="products.image" placeholder="Image Url"><br>
-    <textarea name="content" id="" cols="30" rows="10" ng-model="products.description" placeholder="Board Description"></textarea>
-    <button ng-click="addProduct(products)">Add Product</button>
+		<input type="text" data-ng-model="products.model" placeholder="Board Model"><br>
+    <input type="text" data-ng-model="products.price" placeholder="Board Price"><br>
+    <input type="text" data-ng-model="products.image" placeholder="Image Url"><br>
+    <input type="text" data-ng-model="products.image2" placeholder="Second Image Url"><br>
+    <input type="text" data-ng-model="products.thumbnail" placeholder="Thumbnail Url"><br>
+    <textarea name="content" id="" cols="30" rows="10" data-ng-model="products.description" placeholder="Board Description"></textarea>
+    <button data-ng-click="addProduct(products)">Add Product</button>
 		
 	</div>
 </div>

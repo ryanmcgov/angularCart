@@ -43,10 +43,10 @@ angular.module('shoppingBlog')
 
  })
   .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', function($scope, $location, ProductsSvc) {
-    //$scope.products = ProductsSvc.getAllProducts();
+    $scope.products = ProductsSvc.query();
 
     $scope.addProduct = function (product) {
-      ProductsSvc.createNewProduct(product);
+      ProductsSvc.create(product);
       $location.path('/admin');
 
     };
