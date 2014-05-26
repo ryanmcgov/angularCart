@@ -14,16 +14,16 @@
 <div class="jumbotron col-lg-6">
     <div ng-model="buyTheseThings">
       <ul class="productList">
-        <li ng-repeat="item in buyTheseThings">
+        <li ng-repeat="product in products">
             <ul class="products">
               <li class="row">
                 <div class="col-md-6">
-                  <img src="{{item.image}}">
+                  <img src="{{product.image}}">
                 </div>
                 <div class="col-md-6">
-                  <span>Model: {{item.name}} </span><br>
-                  <span>Price: {{item.price | currency}} </span><br>
-                  <a class="btn btn-sm btn-success" ng-click="addToCart(item)">Add Item</a>
+                  <span>Model: {{product.name}} </span><br>
+                  <span>Price: {{product.price | currency}} </span><br>
+                  <a class="btn btn-sm btn-success" ng-click="addToCart(product)">Add Item</a>
 
                 </div>
               </li>
@@ -48,12 +48,12 @@
             <th>Total</th>
             <th></th>
         </tr>
-        <tr ng-repeat="item in itemCheckout">
+        <tr ng-repeat="product in itemCheckout">
             <td></td>
-            <td>{{item.name}}</td>           
+            <td>{{product.model}}</td>           
             <td><input type="number" ng-model="item.qty" ng-required class="input-mini"></td>
-            <td>{{item.price | currency}}</td>
-            <td>{{item.qty * item.price | currency}}</td>
+            <td>{{product.price | currency}}</td>
+            <td>{{product.qty * product.price | currency}}</td>
             <td>
                 [<a href ng-click="removeFromCart(item)" class="btn btn-small">Remove</a>]
             </td>
