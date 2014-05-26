@@ -59,8 +59,6 @@ angular.module('shoppingBlog')
       $location.path('/admin');
     };
 
-  })
-
     $scope.products = ProductsSvc.query();
 
   }]);
