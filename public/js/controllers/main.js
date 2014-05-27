@@ -48,13 +48,14 @@ angular.module('shoppingBlog')
       ProductsSvc.create(product);
       $location.path('/admin');
     };
-    //$scope.post = ProductSvc.show({ id: $routeParams.id });
+    $scope.product = ProductSvc.show({ id: $routeParams.id });
+    
     $scope.delete = function() { 
-      PostSvc.delete({ id: $routeParams.id });
+      ProductSvc.delete({ id: $routeParams.id });
       $location.path('/admin');
     };
     $scope.edit = function() {
-      PostSvc.edit($scope.post);
+      ProductSvc.edit($scope.product);
       $location.path('/admin');
     };
 
