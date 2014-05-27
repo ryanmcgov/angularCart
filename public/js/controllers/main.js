@@ -43,7 +43,7 @@ angular.module('shoppingBlog')
     };
 
  })
-  .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', 'ProductSvc', function($scope, $location, ProductsSvc, ProductSvc) {
+  .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', 'ProductSvc', function($scope, $location, $routeParams, ProductsSvc, ProductSvc) {
     $scope.addProduct = function (product) {
       ProductsSvc.create(product);
       $location.path('/admin');
