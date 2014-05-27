@@ -27,7 +27,6 @@ angular.module('shoppingBlog')
   })
   .controller('CheckoutCtrl', function ($scope) {
     $scope.itemCheckout = [];
-    $scope.products = ProductsSvc.query();
 
     $scope.addToCart = function(product) {
         $scope.itemCheckout.push(product);
@@ -41,6 +40,8 @@ angular.module('shoppingBlog')
         $scope.itemCheckout.splice(toRemove, 1);
          
     };
+
+    $scope.products = ProductsSvc.query();
 
  })
   .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', function($scope, $location, ProductsSvc) {
