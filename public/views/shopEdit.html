@@ -1,0 +1,28 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="#/blog">Blog</a></li>
+    <li><a ng-href="#/store">Store</a></li>
+    <li class="active"><a ng-href="#/admin">Administrator</a></li>
+   
+  </ul>
+  <h3 class="text-muted">Capitaaahhh</h3>
+</div>
+
+<ul>
+	<li>{{product.model}}</li>
+	<li>{{product.price}}</li>
+	<li>{{product.description}}</li>
+	<li><img ng-src="{{product.image}}"></li>
+	<li><img ng-src="{{product.image2}}"></li>
+	<li><img ng-src="{{product.thumbnail}}"></li>
+</ul>
+
+
+	<input type="text" data-ng-model="newproduct.model" value="{{product.model}}" placeholder="Board Model"><br>
+    <input type="text" data-ng-model="newproduct.price" value="{{product.price}}" placeholder="Board Price"><br>
+    <input type="text" data-ng-model="newproduct.image" value="{{product.iamge}}" placeholder="Image Url"><br>
+    <input type="text" data-ng-model="newproduct.image2" value="{{product.image2}}" placeholder="Second Image Url"><br>
+    <input type="text" data-ng-model="newproduct.thumbnail" value="{{product.thumbnail}}" placeholder="Thumbnail Url"><br>
+    <textarea name="content" id="" cols="30" rows="10" data-ng-model="newproduct.description" value="{{product.description}}" placeholder="Board Description"></textarea>
+    <button data-ng-click="edit()">Update Product</button>
