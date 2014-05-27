@@ -25,7 +25,7 @@ angular.module('shoppingBlog')
   	};
 
   })
-  .controller('CheckoutCtrl', function ($scope) {
+  .controller('CheckoutCtrl', function ($scope, ProductsSvc) {
     $scope.itemCheckout = [];
 
     $scope.addToCart = function(product) {
@@ -41,15 +41,12 @@ angular.module('shoppingBlog')
          
     };
 
-    $scope.products = ProductsSvc.query();
-
  })
   .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', function($scope, $location, ProductsSvc) {
     $scope.addProduct = function (product) {
       ProductsSvc.create(product);
       $location.path('/admin');
     };
-
     $scope.post = ProductSvc.show({ id: $routeParams.id });
     $scope.delete = function() { 
       PostSvc.delete({ id: $routeParams.id });
