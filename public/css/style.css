@@ -22,5 +22,9 @@ a {
 }
 
 .cart {
-    //position: fixed;
+    position: fixed;
+}
+
+.mainj {
+	background-image: url(https://www.capitasnowboarding.com/sites/all/themes/capita1314/images/Header-banner_915x300.png);
 }
