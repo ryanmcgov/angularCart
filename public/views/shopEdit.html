@@ -19,10 +19,11 @@
 </ul>
 
 
-	<input type="text" data-ng-model="newproduct.model" value="{{product.model}}" placeholder="Board Model"><br>
-    <input type="text" data-ng-model="newproduct.price" value="{{product.price}}" placeholder="Board Price"><br>
-    <input type="text" data-ng-model="newproduct.image" value="{{product.iamge}}" placeholder="Image Url"><br>
-    <input type="text" data-ng-model="newproduct.image2" value="{{product.image2}}" placeholder="Second Image Url"><br>
-    <input type="text" data-ng-model="newproduct.thumbnail" value="{{product.thumbnail}}" placeholder="Thumbnail Url"><br>
-    <textarea name="content" id="" cols="30" rows="10" data-ng-model="newproduct.description" value="{{product.description}}" placeholder="Board Description"></textarea>
+	<input type="text" data-ng-model="product.model" value="{{product.model}}"><br>
+    <input type="text" data-ng-model="product.price" value="{{product.price}}"><br>
+    <input type="text" data-ng-model="product.image" value="{{product.iamge}}" ><br>
+    <input type="text" data-ng-model="product.image2" value="{{product.image2}}" ><br>
+    <input type="text" data-ng-model="product.thumbnail" value="{{product.thumbnail}}"><br>
+    <textarea name="content" id="" cols="30" rows="10" data-ng-model="product.description" value="{{product.description}}"></textarea>
     <button data-ng-click="edit()">Update Product</button>
+    <button data-ng-click="delete()">Delete Product</button>
