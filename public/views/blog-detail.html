@@ -11,7 +11,12 @@
 
 
 <section>
-	<h1>{{post.title}}</h1>
-	<p>{{post.content}}</p>
+  <div class="rider">
+      <img ng-src="{{post.image}}">
+    	<h1>{{post.title}}</h1>
+  </div>
+  <div class="riderQuote">
+	   <p>{{post.content}}</p>
+  </div>
 	<a href="#/blog/{{post._id}}/edit">Edit</a> | <a ng-click="delete()">Delete</a>
 </section>
