@@ -25,8 +25,9 @@ angular.module('shoppingBlog')
   	};
 
   })
-  .controller('CheckoutCtrl', function ($scope, ProductsSvc) {
+  .controller('CheckoutCtrl', function($scope, ProductsSvc) {
     $scope.itemCheckout = [];
+    $scope.products = ProductsSvc.query();
 
     $scope.addToCart = function(product) {
         $scope.itemCheckout.push(product);
@@ -42,7 +43,7 @@ angular.module('shoppingBlog')
     };
 
  })
-  .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', function($scope, $location, ProductsSvc) {
+  .controller('ProductCtrl', ['$scope', '$location', 'ProductsSvc', 'ProductSvc', function($scope, $location, ProductsSvc, ProductSvc) {
     $scope.addProduct = function (product) {
       ProductsSvc.create(product);
       $location.path('/admin');
