@@ -44,12 +44,13 @@ angular.module('shoppingBlog')
 
  })
   .controller('ProductCtrl', ['$scope', '$location', '$routeParams', 'ProductsSvc', 'ProductSvc', function($scope, $location, $routeParams, ProductsSvc, ProductSvc) {
+    $scope.product = ProductSvc.show({ id: $routeParams.id });
+
     $scope.addProduct = function (product) {
       ProductsSvc.create(product);
       $location.path('/admin');
     };
-    $scope.product = ProductSvc.show({ id: $routeParams.id });
-    
+
     $scope.delete = function() { 
       ProductSvc.delete({ id: $routeParams.id });
       $location.path('/admin');
